@@ -13,11 +13,12 @@
 //
 // No hints this time ;)
 
-// I AM NOT DONE
+
 
 // Put your function here!
-fn calculate_price_of_apples: i8 {
-    
+fn calculate_price_of_apples(num:i8) -> i8 {
+    if num > 40 {num}
+    else {num * 2}
 }
 // Don't modify this function!
 #[test]

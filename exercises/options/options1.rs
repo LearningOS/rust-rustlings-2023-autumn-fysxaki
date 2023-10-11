@@ -5,6 +5,11 @@
 
 // I AM NOT DONE
 
+
+enum Option<T> {
+    None,
+    Some(T),
+}
 // This function returns how much icecream there is left in the fridge.
 // If it's before 10PM, there's 5 pieces left. At 10PM, someone eats them
 // all, so there'll be no more left :(
@@ -13,8 +18,16 @@ fn maybe_icecream(time_of_day: u16) -> Option<u16> {
     // value of 0 The Option output should gracefully handle cases where
     // time_of_day > 23.
     // TODO: Complete the function body - remember to return an Option!
-    ???
+        let some_number = Option::Some(5) ;
+        let none_number = Option::Some(0);
+        let none_1 =Option::None;
+        if time_of_day< 22 {1;some_number}
+        else if time_of_day <24{1;none_number}
+        else {1;none_1}
+        
 }
+
+
 
 #[cfg(test)]
 mod tests {

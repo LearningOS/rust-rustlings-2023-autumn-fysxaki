@@ -20,7 +20,7 @@
 //
 // No hints this time!
 
-// I AM NOT DONE
+
 
 pub enum Command {
     Uppercase,
@@ -32,11 +32,18 @@ pub mod my_module {
     use super::Command;
 
     // TODO: Complete the function signature!
-    pub fn transformer(input:Vec<(i32, i32)>) -> String {
+    pub fn transformer(input:Vec<(String, Command)>) -> Vec<String> {
         // TODO: Complete the output declaration!
-        let mut output: transformer = vec![];
+        let mut output:  Vec<String>  = Vec::new();
         for (string, command) in input.iter() {
             // TODO: Complete the function body. You can do it!
+            match command{
+                Command::Uppercase => output.push(string.to_uppercase()),
+                Command::Trim => output.push(string.trim().to_string()),
+                Command::Append(count) => {
+                    output.push(string.to_owned() + "bar".repeat(*count).as_str());
+                },
+            }
         }
         output
     }

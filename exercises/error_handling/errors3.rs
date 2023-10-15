@@ -23,6 +23,10 @@ fn main() {
         tokens -= cost;
         println!("You now have {} tokens.", tokens);
     }
+    Err(err) => {
+        println!("Error calculating total cost: {}", err);
+        // Handle the error as needed
+    }
 }
 
 pub fn total_cost(item_quantity: &str) -> Result<i32, ParseIntError> {
